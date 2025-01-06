@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Elf elf1 = new Elf("Buddy", "Elfie", 120, 8, "ToyMaker");
+        elf1.makeToy();
+        elf1.wrapGifts();
+
+        Reindeer reindeer1 = new Reindeer("Dasher", "Dash", 5, 120, "Red");
+        reindeer1.fly();
+        System.out.println(reindeer1.checkFitnessLevel());
+
+        Child child1 = new Child("Alice", 9);
+        child1.addWish("Doll");
+        Child child2 = new Child("Bob", 4);
+        child2.addWish("Train");
+
+        Santa santa = new Santa("Santa", "Claus", 1000, Arrays.asList(child1, child2));
+        System.out.println(santa.checkNaughtyOrNiceList());
+        santa.deliverGifts();
+
+        Snowman snowman = new Snowman(5.5, "Red", false);
+        snowman.decorate("Scarf");
+        snowman.melt();
     }
 }
