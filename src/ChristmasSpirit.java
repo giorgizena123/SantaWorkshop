@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
 
-public interface ChristmasSpirit {
-}
+    interface ChristmasSpirit {
+        void spreadJoy();
+        void singCarols();
+        void decorateTree();
+    }
+
